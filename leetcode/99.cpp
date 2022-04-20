@@ -1,13 +1,13 @@
 class Solution {
 public:
-	TreeNode *isProblematic1 = new TreeNode (- 1), *isProblematic2 = new TreeNode (- 1), *last = new TreeNode (- 1);
+	TreeNode *isProblematic1 = new TreeNode (- 10), *isProblematic2 = new TreeNode (- 10), *last = new TreeNode (- 10);
 	void helper (TreeNode *root) {
 		if (root == NULL)
 			return;
 		helper (root -> left);
-		if (isProblematic1 -> val == - 1 and root -> val < last -> val)
+		if (isProblematic1 -> val == - 10 and root -> val < last -> val)
 			isProblematic1 = last;
-		if (isProblematic1 -> val != - 1 and root -> val < last -> val)
+		if (isProblematic1 -> val != - 10 and root -> val < last -> val)
 			isProblematic2 = root;
 		last = root;
 		helper (root -> right);
