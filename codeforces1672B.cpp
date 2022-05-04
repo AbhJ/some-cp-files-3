@@ -24,7 +24,7 @@ string s;
 
 void solve() {
 	cin >> s;
-	function <void (string)> f = [&] (string s) -> void {
+	function <void (string &)> f = [&] (string & s) -> void {
 		int su = 0;
 		for (char &c : s) {
 			su += c == 'A';
