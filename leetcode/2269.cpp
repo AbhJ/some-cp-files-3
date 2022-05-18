@@ -9,10 +9,8 @@ public:
 			B = string (k - B.length(), '0') + B;
 		int cnt = 0;
 		for (int i = 0; i < A.length() - B.length() + 1; i++) {
-			if (A.substr (i, B.length()) == B) {
-				cout << B << "\n";
+			if (A.substr (i, B.length()) == B)
 				cnt++;
-			}
 		}
 		return cnt;
 	}
