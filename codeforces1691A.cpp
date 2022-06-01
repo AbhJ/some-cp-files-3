@@ -1,0 +1,47 @@
+
+/**
+ * @author      : abhj (Abhijay Mitra)
+ * @created     : Tuesday May 31, 2022 20:06:52 IST
+ * @filename    : a.cpp
+ */
+
+#include "bits/stdc++.h"
+#define int          long long int
+#define mp           make_pair
+#define pb           emplace_back
+#define F            first
+#define S            second
+using vi       =     std::vector<int>;
+using vvi      =     std::vector<vi>;
+using pii      =     std::pair<int, int>;
+using vpii     =     std::vector<pii>;
+using vvpii    =     std::vector<vpii>;
+using namespace std;
+const int inf  =     1e18 + 10;
+const int N    =     2e6 + 10;
+
+int n, a[N], cnte, cnto;
+
+void solve() {
+	cin >> n;
+	cnte = 0, cnto = 0;
+	for (int i = 0; i < n; i ++)
+		cin >> a[i];
+	for (int i = 0; i < n; i++) {
+		cnte += (a[i] & 1);
+		cnto += (a[i] & 1 ^ 1);
+	}
+	cout << min (cnte, cnto);
+}
+
+int32_t main() {
+	ios_base::sync_with_stdio (0);
+	cin.tie (0);
+	int t;
+	cin >> t;
+	while (t--) {
+		solve();
+		cout << "\n";
+	}
+	return 0;
+}
