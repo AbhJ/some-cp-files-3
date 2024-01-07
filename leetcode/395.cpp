@@ -13,7 +13,7 @@ public:
                 int j = i;
                 while(j != r and cnt[s[j] - 'a'] < k)
                     j++;
-                dp[make_pair(l, r)] = max({dp[make_pair(l, r)], 
+                dp[make_pair(l, r)]=max({dp[make_pair(l, r)], 
                     ans(s, dp, l, i - 1, k),
                     ans(s, dp, j, r, k)});
                 break;
