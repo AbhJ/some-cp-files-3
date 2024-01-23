@@ -48,7 +48,6 @@ void solve() {
 		for (auto mon : can_die) if (alive.count (mon)) {
 				auto it = alive.find (mon);
 				int pos_left = (it == alive.begin() ? - 1 : *prev (it)), pos_right = (it == prev (alive.end()) ? - 1 : *next (it));
-				assert (pos_left < n and pos_left > - 2 and pos_right < n and pos_right > - 2);
 				int attack = (pos_left != - 1 ? a[pos_left] : 0) + (pos_right != - 1 ? a[pos_right] : 0);
 				if (attack > d[mon]) {
 					// mon dies
