@@ -34,7 +34,7 @@ bool f (int m, int k) {
 	lef = 0;
 	for (int i = 0; i < n; i++) {
 		if (a[i] > m) {
-			lef ++;
+			lef++;
 		}
 		else if (m - a[i] > k)
 			return false;
