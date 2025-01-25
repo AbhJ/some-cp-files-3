@@ -29,11 +29,6 @@ public:
 	}
 
 	bool makesquare (vector<int>& matchsticks) {
-		vector<int> v = {2, 3, 3, 4, 2, 1, 1};
-		// not sure how its TLE ing on such a easy case on server
-		// when I am trying out from my side, its running in 0 ms
-		if (matchsticks == v)
-			return true;
 		sort (matchsticks.rbegin(), matchsticks.rend());
 		vector<int> sums (4);
 		tar = accumulate (matchsticks.begin(), matchsticks.end(), 0) / 4;
